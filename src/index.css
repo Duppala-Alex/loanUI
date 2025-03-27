@@ -1,0 +1,276 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #f4f6f9;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #ddd;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* Filter Buttons Row */
+.filters-wrapper {
+  margin-top: 10px;
+}
+
+.filters-buttons-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+.filters-buttons-row button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filters-buttons-row button:hover {
+  background-color: #0056b3;
+}
+
+.filters-buttons-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.filters-buttons-row::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Active Filter Highlight */
+.active-filter {
+  background-color: #0056b3 !important;
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f6f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Highlight New Row */
+.highlight-row {
+  animation: highlightFlash 2s ease-in-out;
+}
+
+@keyframes highlightFlash {
+  0% { background-color: #ffffcc; }
+  100% { background-color: transparent; }
+}
+
+/* Upload Form (Data Upload Section) */
+.upload-form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.upload-form h2 {
+  margin-bottom: 20px;
+}
+
+.upload-form .form-group {
+  margin-bottom: 15px;
+}
+
+.upload-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.upload-form input,
+.upload-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-form .submit-btn {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Overlay (for UploadModal triggered by "More Filters") */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.modal-content .form-group {
+  margin-bottom: 20px;
+}
+
+.modal-content .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.modal-content .form-group select,
+.modal-content .form-group input[type="text"],
+.modal-content .form-group input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  margin-top: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #a82330;
+}
+
+/* Toast Success */
+.toast-success {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeInOut 2.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.clear-search-btn {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-search-btn:hover {
+  color: #333;
+}
